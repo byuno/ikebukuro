@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-
+import 'dotenv/config'
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -26,7 +26,15 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'https://rest.iad-07.braze.com',
+
+    extraHTTPHeaders: {
+      // Add authorization token to all requests.
+      // Assuming personal access token available in the environment.
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.API_KEY}`,
+      
+    },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
