@@ -30,7 +30,6 @@ export default defineConfig({
 
     extraHTTPHeaders: {
       // Add authorization token to all requests.
-      // Assuming personal access token available in the environment.
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${process.env.API_KEY}`,
       
