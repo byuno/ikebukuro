@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test('Create new user alias', async ({ request }) => {
    const response = await request.post('/users/track', {
@@ -37,6 +37,8 @@ test('Create new user alias', async ({ request }) => {
         
     }
   })
+
+  await expect(response).toBeOK();
 
   console.log(response.status())
 });
