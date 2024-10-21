@@ -38,7 +38,8 @@ test('Create new user alias', async ({ request }) => {
     }
   })
 
+  console.log(response.status());
+  
   await expect(response).toBeOK();
 
-  console.log(response.status())
 });
