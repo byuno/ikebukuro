@@ -22,6 +22,6 @@ test('Create new user alias', async ({ request }) => {
         }   
   })
 
-  await expect(response).toBeOK();
+    await expect(response).toBeOK();
 
 });
