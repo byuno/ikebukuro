@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Create new user alias', async ({ request }) => {
+test('Reward Level 1 Unlocked', async ({ request }) => {
 
     const date = new Date();
 

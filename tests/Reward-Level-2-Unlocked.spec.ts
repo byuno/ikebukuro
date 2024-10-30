@@ -21,7 +21,7 @@ function generateGUID() {
 }
 
 
-test('Create new user alias', async ({ request }) => {
+test('Reward Level 2 Unlocked', async ({ request }) => {
 
     const date = new Date();
     const guid = generateGUID()

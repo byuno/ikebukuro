@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Create new user alias', async ({ request }) => {
+test('New User Registered', async ({ request }) => {
    const response = await request.post('/users/track', {
     data: {
         
