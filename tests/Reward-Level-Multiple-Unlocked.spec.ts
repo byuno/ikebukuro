@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Reward Level 3 CPL Unlocked', async ({ request }) => {
+test('Reward Level Multiple Unlocked', async ({ request }) => {
 
     const date = new Date();
     const rewardExpiryDate = date.setDate(date.getDate()+60); //60 is in days
@@ -10,10 +10,12 @@ test('Reward Level 3 CPL Unlocked', async ({ request }) => {
             "events": [
                 {
                     "external_id": process.env.EXTERNAL_ID, //CEPCustomerUniqueID
-                    "name": "Reward Level 3 Cpl Reminder",
+                    "name": "Reward Level Multiple Unlocked",
                     "time": date,
                     "properties": {
-                        "reward_expiry_date_time": rewardExpiryDate
+                        //    "app_id": "{{$guid}}", //Push notification only
+                        "deeplink_type": "deals" //Push notification only
+                        //    "reward_expiry_date_time": "{{$isoTimestamp}}" //Push notification only
                     }
                 }
             ]

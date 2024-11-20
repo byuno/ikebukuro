@@ -9,7 +9,7 @@ test('Reward Level 3 CPL Reminder', async ({ request }) => {
         data:{
             "events": [
                 {
-                    "external_id": "{{external_id}}", //CEPCustomerUniqueID
+                    "external_id": process.env.EXTERNAL_ID, //CEPCustomerUniqueID
                     "name": "Reward Level 3 Cpl Reminder",
                     "time": date,
                     "properties": {
