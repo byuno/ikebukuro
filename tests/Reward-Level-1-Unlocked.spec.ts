@@ -8,7 +8,7 @@ test('Reward Level 1 Unlocked', async ({ request }) => {
         data: {
             "events": [
                 {
-                    "external_id": "buno-test-carWashReceipt1", //CEPCustomerUniqueID
+                    "external_id": process.env.EXTERNAL_ID, //CEPCustomerUniqueID
                     "name": "Reward Level 1 Unlocked",
                     "time": date,
                     "properties": {

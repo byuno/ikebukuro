@@ -8,7 +8,7 @@ test('CIBC Linked', async ({ request }) => {
     data: {
         "events": [
             {
-                "external_id": "buno-test-carWashReceipt1", //CEPCustomerUniqueID
+                "external_id": process.env.EXTERNAL_ID, //CEPCustomerUniqueID
                 "name": "CIBC Linked",
                 "time": date
             }
