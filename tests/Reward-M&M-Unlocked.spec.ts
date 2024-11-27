@@ -9,12 +9,12 @@ test('Reward Level Multiple Unlocked', async ({ request }) => {
             "events": [
                 {
                     "external_id": process.env.EXTERNAL_ID, //CEPCustomerUniqueID
-                    "name": "Reward Level Multiple Unlocked",
+                    "name": "Reward MM Unlocked",
                     "time": date,
                     "properties": {
-                        //    "app_id": "{{$guid}}", //Push notification only
-                        "deeplink_type": "deals" //Push notification only
-                        //    "reward_expiry_date_time": "{{$isoTimestamp}}" //Push notification only
+                        "mm_promo_code": "ABCDE12345",
+                        "dollar_amount": 5,
+                        "reward_expiry_date_time": date
                     }
                 }
             ]
