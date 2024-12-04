@@ -18,7 +18,7 @@ test('Verify deals - Vancouver', async ({ page }) => {
     //Select Vancouver
     await page.getByText('V5S 4R2Vancouver, BC, Canada').click();
     
-    //
+    //couldn't find location
     await page.getByText('We could not find any').isVisible();
 
   });

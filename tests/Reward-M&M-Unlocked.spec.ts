@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Reward Level Multiple Unlocked', async ({ request }) => {
+test('Reward M&M Unlocked', async ({ request }) => {
 
     const date = new Date();
 

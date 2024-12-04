@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Reward Level 3 CPL Unlocked', async ({ request }) => {
+test('Reward Level 3 Day 21 Reminder', async ({ request }) => {
 
     const date = new Date();
     const rewardExpiryDate = date.setDate(date.getDate()+60); //60 is in days
